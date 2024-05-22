@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane fx:id="mainPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashboardController">
+   <bottom>
+      <HBox prefHeight="64.0" prefWidth="1300.0" spacing="10.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addItemToCart" prefHeight="54.0" prefWidth="220.0" style="-fx-background-color: #2ed573;" text="[F1 - Add to Cart]" textAlignment="CENTER" />
+            <Button fx:id="removeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#removeItemFromCart" prefHeight="54.0" prefWidth="220.0" style="-fx-background-color: #1e90ff;" text="[F2 - Remove from Cart]" textAlignment="CENTER" />
+            <Button fx:id="cancelButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelOrder" prefHeight="54.0" prefWidth="220.0" style="-fx-background-color: #ff7f50;" text="[F3 - Cancel Order]" textAlignment="CENTER" />
+            <Button fx:id="chceckOutButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#checkOutCart" prefHeight="54.0" prefWidth="220.0" style="-fx-background-color: #ffa502;" text="[F4 - Check Out]" textAlignment="CENTER" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="220.0" style="-fx-background-color: #747d8c;" text="[F5 - Sales Report]" textAlignment="CENTER" />
+            <Button fx:id="logoutButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#logoutCashier" prefHeight="54.0" prefWidth="220.0" style="-fx-background-color: #ff4757;" text="[F7 - Logout]" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <ListView fx:id="listView" prefHeight="412.0" prefWidth="844.0" />
+   </center>
+   <left>
+      <VBox prefHeight="412.0" prefWidth="175.0" spacing="10.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="155.0" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayCPU" prefHeight="90.0" prefWidth="220.0" style="-fx-background-color: #70a1ff;" text="CPU" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayRAM" prefHeight="90.0" prefWidth="220.0" style="-fx-background-color: #70a1ff;" text="RAM" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayGPU" prefHeight="90.0" prefWidth="220.0" style="-fx-background-color: #70a1ff;" text="GPU" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayStorage" prefHeight="90.0" prefWidth="220.0" style="-fx-background-color: #70a1ff;" text="Storage" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayMotherboard" prefHeight="90.0" prefWidth="220.0" style="-fx-background-color: #70a1ff;" text="Motherboard" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayPSU" prefHeight="90.0" prefWidth="220.0" style="-fx-background-color: #70a1ff;" text="PSU" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="601.0" prefWidth="469.0" spacing="10.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="155.0" />
+            <TableView fx:id="cartTableView" prefHeight="200.0" prefWidth="200.0">
+               <columns>
+                  <TableColumn fx:id="itemNameColumn" prefWidth="120.0" text="Item Name" />
+                  <TableColumn fx:id="itemQuantityColumn" prefWidth="120.0" text="Quantity" />
+                  <TableColumn fx:id="itemPriceColumn" prefWidth="120.0" text="Price" />
+               </columns>
+            </TableView>
+            <!-- VBox to display selected item details -->
+            <VBox fx:id="detailsPane" spacing="10.0" style="-fx-background-color: #ffffff; -fx-padding: 10;">
+                <children>
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Item Details" />
+                    <Label fx:id="nameLabel" text="Name: " />
+                    <Label fx:id="quantityLabel" text="Quantity: " />
+                    <Label fx:id="priceLabel" text="Price: " />
+                    <Label fx:id="descriptionLabel" text="Description: " />
+                </children>
+            </VBox>
+            <ImageView fx:id="itemImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

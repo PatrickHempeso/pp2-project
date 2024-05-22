@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="873.0" prefWidth="1184.0" style="-fx-background-color: #868686;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dashboardController">
+   <children>
+      <Button layoutX="11.0" layoutY="52.0" mnemonicParsing="false" onAction="#switchToSceneCPU" prefHeight="97.0" prefWidth="185.0" text="CPU">
+         <font>
+            <Font size="33.0" />
+         </font></Button>
+      <MeshView />
+      <Button layoutX="11.0" layoutY="512.0" mnemonicParsing="false" onAction="#switchToSceneStorage" prefHeight="97.0" prefWidth="185.0" text="STORAGE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="11.0" layoutY="401.0" mnemonicParsing="false" onAction="#switchToSceneMB" prefHeight="97.0" prefWidth="185.0" text="MOTHERBOARD">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="11.0" layoutY="279.0" mnemonicParsing="false" onAction="#switchToSceneRAM" prefHeight="97.0" prefWidth="185.0" text="RAM">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Button layoutX="11.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchToSceneGPU" prefHeight="97.0" prefWidth="185.0" text="GPU">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Button layoutX="11.0" layoutY="634.0" mnemonicParsing="false" onAction="#switchToScenePSU" prefHeight="97.0" prefWidth="185.0" style="-fx-background-color: white;" text="PSU">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Button>
+      <SubScene fill="BLACK" height="883.0" layoutX="212.0" layoutY="-1.0" width="972.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="397.0" prefWidth="191.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

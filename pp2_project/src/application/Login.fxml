@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="715.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <BorderPane layoutX="-7.0" prefHeight="715.0" prefWidth="1166.0">
+         <left>
+            <Pane prefHeight="715.0" prefWidth="429.0">
+               <children>
+                   <TextField fx:id="usernameField" layoutX="147.0" layoutY="214.0" prefHeight="22.0" prefWidth="149.0" />
+                   <PasswordField fx:id="passwordField" layoutX="147.0" layoutY="256.0" />
+                   <Button layoutX="353.0" layoutY="334.0" onAction="#login" text="Login" />
+                   <Label layoutX="84.0" layoutY="218.0" text="Username:" />
+                   <Label layoutX="85.0" layoutY="260.0" text="Password:" />
+                  <Label layoutX="134.0" layoutY="14.0" text="PC SHOP">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="39.0" />
+                     </font>
+                  </Label>
+                  <Line endX="100.0" layoutX="222.0" layoutY="63.0" startX="-100.0" />
+                  <Label layoutX="138.0" layoutY="686.0" text="2024 - 2030 All rights Reserved." />
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <VBox prefHeight="715.0" prefWidth="739.0" style="-fx-background-color: #AA4A44;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="717.0" fitWidth="752.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../Untitled.png" />
+                     </image>
+                  </ImageView>
+               </children></VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="803.0" prefWidth="1203.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Gray;" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <VBox prefHeight="610.0" prefWidth="250.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="361.0" prefWidth="198.0">
+               <children>
+                  <Button layoutX="27.0" layoutY="181.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="196.0" style="-fx-background-color: red;" text="AMD">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="27.0" layoutY="47.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="196.0" style="-fx-background-color: #00c7fd;" text="Intel" textFill="#0068b5">
+                     <font>
+                        <Font size="47.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane prefHeight="803.0" prefWidth="350.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

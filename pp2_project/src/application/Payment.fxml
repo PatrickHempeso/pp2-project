@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="PaymentScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaymentController">
+   <bottom>
+      <HBox prefHeight="117.0" prefWidth="1260.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="117.0" prefWidth="1261.0">
+               <children>
+                  <Label fx:id="totalAmountLabel" layoutX="53.0" layoutY="29.0" prefHeight="59.0" prefWidth="350.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="amountPaidLabel" layoutX="448.0" layoutY="29.0" prefHeight="59.0" prefWidth="350.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="changeLabel" layoutX="845.0" layoutY="29.0" prefHeight="59.0" prefWidth="350.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="603.0" prefWidth="323.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="603.0" prefWidth="355.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="22.0" text="Enter amount to be paid">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonEnter" layoutX="259.0" layoutY="65.0" mnemonicParsing="false" onAction="#enterButton" prefHeight="187.0" prefWidth="55.0" text="Enter" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonPrintReceipt" layoutX="10.0" layoutY="467.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="303.0" text="Print Receipt">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button7" layoutX="14.0" layoutY="65.0" mnemonicParsing="false" onAction="#enter7" prefHeight="74.0" prefWidth="75.0" text="7">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button8" layoutX="97.0" layoutY="65.0" mnemonicParsing="false" onAction="#enter8" prefHeight="74.0" prefWidth="75.0" text="8">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttton9" layoutX="176.0" layoutY="65.0" mnemonicParsing="false" onAction="#enter9" prefHeight="74.0" prefWidth="75.0" text="9">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button4" layoutX="14.0" layoutY="158.0" mnemonicParsing="false" onAction="#enter4" prefHeight="74.0" prefWidth="75.0" text="4">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button5" layoutX="97.0" layoutY="158.0" mnemonicParsing="false" onAction="#enter5" prefHeight="74.0" prefWidth="75.0" text="5">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button6" layoutX="176.0" layoutY="158.0" mnemonicParsing="false" onAction="#enter6" prefHeight="74.0" prefWidth="75.0" text="6">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button1" layoutX="14.0" layoutY="250.0" mnemonicParsing="false" onAction="#enter1" prefHeight="74.0" prefWidth="75.0" text="1">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button2" layoutX="97.0" layoutY="250.0" mnemonicParsing="false" onAction="#enter2" prefHeight="74.0" prefWidth="75.0" text="2">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button3" layoutX="176.0" layoutY="250.0" mnemonicParsing="false" onAction="#enter3" prefHeight="74.0" prefWidth="75.0" text="3">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button0" layoutX="97.0" layoutY="340.0" mnemonicParsing="false" onAction="#enter0" prefHeight="74.0" prefWidth="75.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonBackspace" layoutX="14.0" layoutY="340.0" mnemonicParsing="false" onAction="#enterBackspace" prefHeight="121.0" prefWidth="75.0" text="Backspace">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonClear" layoutX="176.0" layoutY="340.0" mnemonicParsing="false" onAction="#enterClear" prefHeight="121.0" prefWidth="75.0" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonNew" layoutX="259.0" layoutY="274.0" mnemonicParsing="false" onAction="#newOrder" prefHeight="187.0" prefWidth="55.0" text="New" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="paymentLabel" layoutX="10.0" layoutY="524.0" prefHeight="65.0" prefWidth="305.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <Pane prefHeight="603.0" prefWidth="876.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="cartView" prefHeight="607.0" prefWidth="939.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="quantityColumn" text="Quantity" />
+                  <TableColumn fx:id="priceColumn" text="Price" />
+                  <TableColumn fx:id="descriptionColumn" text="Description" />
+                  <TableColumn fx:id="totalColumn" text="Total" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
